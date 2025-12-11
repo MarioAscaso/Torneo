@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Agregar Nuevo Juego - Gaming Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <main class="app">
+        <aside class="sidebar">
+            <div class="sidebar-logo"><div class="logo-dot">
+                <img src="https://www.cursosccc.com/wp-content/uploads/2019/01/logo-ccc-2019.jpg" alt="" srcset="">
+            </div></div>
+            <div class="sidebar-section sidebar-section--main">
+                <button class="sidebar-item" onclick="window.location.href='index.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-gauge-high"></i></span><span class="sidebar-label">Dashboard</span>
+                </button>
+            </div>
+            <div class="sidebar-section">
+                <button class="sidebar-item" onclick="window.location.href='usuarios.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-users"></i></span><span class="sidebar-label">Usuarios</span>
+                </button>
+                <button class="sidebar-item active" onclick="window.location.href='juegos.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-gamepad"></i></span><span class="sidebar-label">Juegos</span>
+                </button>
+                <button class="sidebar-item">
+                    <span class="sidebar-icon"><i class="fa-solid fa-trophy"></i></span><span class="sidebar-label">Torneos</span>
+                </button>
+            </div>
+        </aside>
+
+        <section class="dashboard">
+            <section class="dashboard-header">
+                <nav class="top-nav">
+                    <div class="nav-tabs">
+                        <button class="nav-tab active" onclick="window.location.href='juegos.html'">
+                            <i class="fa-solid fa-arrow-left"></i> Volver a Juegos
+                        </button>
+                    </div>
+                    <div class="nav-right"><button class="nav-avatar"><span class="avatar-circle">
+                <img src="https://sm.ign.com/t/ign_pk/cover/a/avatar-gen/avatar-generations_rpge.600.jpg" alt="" srcset="">
+              </span></button></div>
+                </nav>
+            </section>
+
+            <section class="dashboard-body">
+                <section class="content-section form-container">
+                    <header class="content-header"><div class="content-title">Datos del Nuevo Juego</div></header>
+
+                    <form action="#" method="POST">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Nombre del Juego</label>
+                                <input type="text" class="form-input" placeholder="Ej. Call of Duty: Warzone" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Género Principal</label>
+                                <select class="form-select">
+                                    <option value="fps">Shooter (FPS/TPS)</option>
+                                    <option value="sports">Deportes / Simulación</option>
+                                    <option value="moba">MOBA</option>
+                                    <option value="fighting">Fighting Game</option>
+                                    <option value="rpg">RPG / MMORPG</option>
+                                    <option value="card">Cartas / Estrategia</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="form-label">URL de Portada / Banner</label>
+                                <input type="url" class="form-input" placeholder="https://...">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="form-label">Plataformas Soportadas</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label"><input type="checkbox" checked> <span>PC (Windows)</span></label>
+                                    <label class="checkbox-label"><input type="checkbox"> <span>PlayStation 5</span></label>
+                                    <label class="checkbox-label"><input type="checkbox"> <span>Xbox Series X/S</span></label>
+                                    <label class="checkbox-label"><input type="checkbox"> <span>Nintendo Switch</span></label>
+                                    <label class="checkbox-label"><input type="checkbox"> <span>Mobile (iOS/Android)</span></label>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="form-label">Descripción Breve</label>
+                                <textarea class="form-input" rows="3" placeholder="Información sobre reglas específicas o versión del juego..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-cancel" onclick="window.location.href='juegos.html'">Cancelar</button>
+                            <button type="submit" class="btn-submit">Guardar Juego</button>
+                        </div>
+                    </form>
+                </section>
+            </section>
+        </section>
+    </main>
+</div>
+</body>
+</html>
