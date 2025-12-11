@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Torneos - Gaming Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <main class="app">
+        <aside class="sidebar">
+            <div class="sidebar-logo"><div class="logo-dot">
+                <img src="https://www.cursosccc.com/wp-content/uploads/2019/01/logo-ccc-2019.jpg" alt="" srcset="">
+            </div></div>
+            <div class="sidebar-section sidebar-section--main">
+                <button class="sidebar-item" onclick="window.location.href='index.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-gauge-high"></i></span><span class="sidebar-label">Dashboard</span>
+                </button>
+            </div>
+            <div class="sidebar-section">
+                <button class="sidebar-item" onclick="window.location.href='usuarios.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-users"></i></span><span class="sidebar-label">Usuarios</span>
+                </button>
+                <button class="sidebar-item" onclick="window.location.href='juegos.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-gamepad"></i></span><span class="sidebar-label">Juegos</span>
+                </button>
+                <button class="sidebar-item active">
+                    <span class="sidebar-icon"><i class="fa-solid fa-trophy"></i></span><span class="sidebar-label">Torneos</span>
+                </button>
+            </div>
+        </aside>
+
+        <section class="dashboard">
+            <section class="dashboard-header">
+                <nav class="top-nav">
+                    <div class="nav-tabs">
+                        <button class="nav-tab active">Todos</button>
+                        <button class="nav-tab">En Vivo</button>
+                        <button class="nav-tab">Próximos</button>
+                        <button class="nav-tab">Finalizados</button>
+                    </div>
+                    <div class="nav-right">
+                        <button class="btn-create" onclick="window.location.href='crear-torneo.html'">
+                            <i class="fa-solid fa-plus"></i> Crear Torneo
+                        </button>
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Buscar torneo..." />
+                        </div>
+                        <button class="nav-avatar"><span class="avatar-circle">
+                <img src="https://sm.ign.com/t/ign_pk/cover/a/avatar-gen/avatar-generations_rpge.600.jpg" alt="" srcset="">
+              </span></button>
+                    </div>
+                </nav>
+            </section>
+
+            <section class="dashboard-body">
+
+                <div class="social-cards">
+                    <article class="social-card">
+                        <header class="social-card-header">
+                <span class="social-logo" style="background: #f1c40f;">
+                  <i class="fa-solid fa-trophy"></i>
+                </span>
+                            <span class="social-platform">Competición</span>
+                            <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+                        </header>
+                        <div class="social-main">
+                            <div class="social-number">8</div>
+                            <div class="social-subtitle">Torneos Activos</div>
+                        </div>
+                    </article>
+
+                    <article class="social-card">
+                        <header class="social-card-header">
+                <span class="social-logo" style="background: #27ae60;">
+                  <i class="fa-solid fa-money-bill-wave"></i>
+                </span>
+                            <span class="social-platform">Premios</span>
+                            <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+                        </header>
+                        <div class="social-main">
+                            <div class="social-number">$45k</div>
+                            <div class="social-subtitle">Repartidos este mes</div>
+                        </div>
+                    </article>
+
+                    <article class="social-card">
+                        <header class="social-card-header">
+                <span class="social-logo" style="background: #8e44ad;">
+                  <i class="fa-solid fa-people-group"></i>
+                </span>
+                            <span class="social-platform">Participación</span>
+                            <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+                        </header>
+                        <div class="social-main">
+                            <div class="social-number">340</div>
+                            <div class="social-subtitle">Jugadores Inscritos</div>
+                        </div>
+                    </article>
+                </div>
+
+                <section class="content-section">
+                    <header class="content-header">
+                        <div class="content-title">Calendario de Competiciones</div>
+                        <div class="content-tabs">
+                            <button class="content-tab active">Lista</button>
+                            <button class="content-tab">Bracket</button>
+                        </div>
+                    </header>
+
+                    <div class="content-table">
+                        <div class="tournaments-table-grid table-header" style="border-bottom: 1px solid #ececec; font-weight: 500; color: #8c8c8c;">
+                            <span>Nombre del Torneo</span>
+                            <span>Juego</span>
+                            <span>Fecha Inicio</span>
+                            <span>Participantes</span>
+                            <span>Premio</span>
+                            <span>Estado</span>
+                        </div>
+
+                        <div class="tournaments-table-grid table-row" style="border-bottom: 1px solid #f5f5f5;">
+                            <span style="font-weight: 600;">Valorant Masters: Summer</span>
+                            <div class="tournament-info-cell">
+                                <div class="game-icon-small" style="background: #ff4655;"><i class="fa-solid fa-v"></i></div>
+                                <span>Valorant</span>
+                            </div>
+                            <div class="date-info"><strong>10 Dic 2024</strong><span>18:00 PM</span></div>
+                            <span>16 / 32 Equipos</span>
+                            <span class="prize-pool">$5,000</span>
+                            <span><span class="status-badge st-live">En Vivo</span></span>
+                        </div>
+
+                        <div class="tournaments-table-grid table-row" style="border-bottom: 1px solid #f5f5f5;">
+                            <span style="font-weight: 600;">FIFA 24 Weekly Cup</span>
+                            <div class="tournament-info-cell">
+                                <div class="game-icon-small" style="background: #2ecc71;"><i class="fa-regular fa-futbol"></i></div>
+                                <span>EA FC 24</span>
+                            </div>
+                            <div class="date-info"><strong>15 Dic 2024</strong><span>20:00 PM</span></div>
+                            <span>45 / 128 Jugadores</span>
+                            <span class="prize-pool">$500</span>
+                            <span><span class="status-badge st-upcoming">Registro</span></span>
+                        </div>
+
+                        <div class="tournaments-table-grid table-row" style="border-bottom: none;">
+                            <span style="font-weight: 600;">LoL Community Clash</span>
+                            <div class="tournament-info-cell">
+                                <div class="game-icon-small" style="background: #0984e3;"><i class="fa-solid fa-shield-halved"></i></div>
+                                <span>LoL</span>
+                            </div>
+                            <div class="date-info"><strong>01 Dic 2024</strong><span>Finalizado</span></div>
+                            <span>8 Equipos</span>
+                            <span class="prize-pool">$1,000</span>
+                            <span><span class="status-badge st-finished">Finalizado</span></span>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+</div>
+</body>
+</html>

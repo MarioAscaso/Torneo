@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Juegos - Gaming Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/index.css"/>
+
+
+</head>
+<body>
+<div class="page-wrapper">
+
+    <main class="app">
+        <aside class="sidebar">
+            <div class="sidebar-logo"><div class="logo-dot">
+                <img src="https://www.cursosccc.com/wp-content/uploads/2019/01/logo-ccc-2019.jpg" alt="" srcset="">
+            </div></div>
+
+            <div class="sidebar-section sidebar-section--main">
+                <button class="sidebar-item" onclick="window.location.href='index.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-gauge-high"></i></span>
+                    <span class="sidebar-label">Dashboard</span>
+                </button>
+            </div>
+
+            <div class="sidebar-section">
+                <button class="sidebar-item" onclick="window.location.href='usuarios.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-users"></i></span>
+                    <span class="sidebar-label">Usuarios</span>
+                </button>
+
+                <button class="sidebar-item active">
+                    <span class="sidebar-icon"><i class="fa-solid fa-gamepad"></i></span>
+                    <span class="sidebar-label">Juegos</span>
+                </button>
+
+                <button class="sidebar-item" onclick="window.location.href='torneos.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-trophy"></i></span>
+                    <span class="sidebar-label">Torneos</span>
+                </button>
+            </div>
+        </aside>
+
+        <section class="dashboard">
+            <section class="dashboard-header">
+                <nav class="top-nav">
+                    <div class="nav-tabs">
+                        <button class="nav-tab active">Todos</button>
+                        <button class="nav-tab">FPS</button>
+                        <button class="nav-tab">Deportes</button>
+                        <button class="nav-tab">Estrategia</button>
+                    </div>
+                    <div class="nav-right">
+                        <button class="btn-create" onclick="window.location.href='crear-juego.html'">
+                            <i class="fa-solid fa-plus"></i> Agregar Juego
+                        </button>
+
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Buscar juego..." />
+                        </div>
+                        <button class="nav-avatar"><span class="avatar-circle">
+                <img src="https://sm.ign.com/t/ign_pk/cover/a/avatar-gen/avatar-generations_rpge.600.jpg" alt="" srcset="">
+              </span></button>
+                    </div>
+                </nav>
+            </section>
+
+            <section class="dashboard-body">
+
+                <div class="social-cards">
+                    <article class="social-card">
+                        <header class="social-card-header">
+                <span class="social-logo" style="background: #6c5ce7;">
+                  <i class="fa-solid fa-layer-group"></i>
+                </span>
+                            <span class="social-platform">Catálogo</span>
+                            <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+                        </header>
+                        <div class="social-main">
+                            <div class="social-number">24</div>
+                            <div class="social-subtitle">Juegos Activos</div>
+                        </div>
+                    </article>
+
+                    <article class="social-card">
+                        <header class="social-card-header">
+                <span class="social-logo" style="background: #e17055;">
+                  <i class="fa-solid fa-fire"></i>
+                </span>
+                            <span class="social-platform">Popularidad</span>
+                            <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+                        </header>
+                        <div class="social-main">
+                            <div class="social-number">Valorant</div>
+                            <div class="social-subtitle">Top Jugado (45% Tráfico)</div>
+                        </div>
+                    </article>
+
+                    <article class="social-card">
+                        <header class="social-card-header">
+                <span class="social-logo" style="background: #0984e3;">
+                  <i class="fa-solid fa-server"></i>
+                </span>
+                            <span class="social-platform">Servidores</span>
+                            <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+                        </header>
+                        <div class="social-main">
+                            <div class="social-number">100%</div>
+                            <div class="social-subtitle">Estado Operativo</div>
+                        </div>
+                    </article>
+                </div>
+
+                <section class="content-section">
+                    <header class="content-header">
+                        <div class="content-title">Biblioteca de Juegos</div>
+                        <div class="content-tabs">
+                            <button class="content-tab active">Lista</button>
+                            <button class="content-tab">Cuadrícula</button>
+                        </div>
+                    </header>
+
+                    <div class="content-table">
+                        <div class="games-table-grid table-header" style="border-bottom: 1px solid #ececec; font-weight: 500; color: #8c8c8c;">
+                            <span>Nombre del Juego</span>
+                            <span>Género</span>
+                            <span>Plataformas</span>
+                            <span>Torneos Activos</span>
+                            <span>Acciones</span>
+                        </div>
+
+                        <div class="games-table-grid table-row" style="border-bottom: 1px solid #f5f5f5;">
+                            <div class="game-info-cell">
+                                <img src="https://ui-avatars.com/api/?name=V&background=ff4655&color=fff" class="game-thumb" alt="Valorant">
+                                <span style="font-weight: 500;">Valorant</span>
+                            </div>
+                            <span style="color: #666;">Tactical Shooter</span>
+                            <div>
+                                <span class="platform-badge platform-pc">PC</span>
+                            </div>
+                            <span class="positive">8 Torneos</span>
+                            <span>
+                <button class="action-btn" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                <button class="action-btn delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+              </span>
+                        </div>
+
+                        <div class="games-table-grid table-row" style="border-bottom: 1px solid #f5f5f5;">
+                            <div class="game-info-cell">
+                                <img src="https://ui-avatars.com/api/?name=F&background=2ecc71&color=fff" class="game-thumb" alt="FIFA">
+                                <span style="font-weight: 500;">EA Sports FC 24</span>
+                            </div>
+                            <span style="color: #666;">Deportes</span>
+                            <div>
+                                <span class="platform-badge platform-ps">PS5</span>
+                                <span class="platform-badge platform-xbox">Xbox</span>
+                                <span class="platform-badge platform-pc">PC</span>
+                            </div>
+                            <span class="positive">12 Torneos</span>
+                            <span>
+                <button class="action-btn" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                <button class="action-btn delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+              </span>
+                        </div>
+
+                        <div class="games-table-grid table-row" style="border-bottom: 1px solid #f5f5f5;">
+                            <div class="game-info-cell">
+                                <img src="https://ui-avatars.com/api/?name=L&background=c4b5fd&color=fff" class="game-thumb" alt="LoL">
+                                <span style="font-weight: 500;">League of Legends</span>
+                            </div>
+                            <span style="color: #666;">MOBA</span>
+                            <div>
+                                <span class="platform-badge platform-pc">PC</span>
+                            </div>
+                            <span class="negative">0 Torneos (Off-season)</span>
+                            <span>
+                <button class="action-btn" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                <button class="action-btn delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+              </span>
+                        </div>
+
+                        <div class="games-table-grid table-row" style="border-bottom: none;">
+                            <div class="game-info-cell">
+                                <img src="https://ui-avatars.com/api/?name=S&background=feca57&color=fff" class="game-thumb" alt="Street Fighter">
+                                <span style="font-weight: 500;">Street Fighter 6</span>
+                            </div>
+                            <span style="color: #666;">Fighting</span>
+                            <div>
+                                <span class="platform-badge platform-ps">PS5</span>
+                                <span class="platform-badge platform-pc">PC</span>
+                            </div>
+                            <span class="positive">3 Torneos</span>
+                            <span>
+                <button class="action-btn" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                <button class="action-btn delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+              </span>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Usuarios - Gaming Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/index.css"/>
+
+
+</head>
+<body>
+<div class="page-wrapper">
+
+    <main class="app">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-dot">
+                    <img src="https://www.cursosccc.com/wp-content/uploads/2019/01/logo-ccc-2019.jpg" alt="" srcset="">
+                </div>
+            </div>
+
+            <div class="sidebar-section sidebar-section--main">
+                <button class="sidebar-item" onclick="window.location.href='index.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-gauge-high"></i></span>
+                    <span class="sidebar-label">Dashboard</span>
+                </button>
+            </div>
+
+            <div class="sidebar-section">
+                <button class="sidebar-item active">
+                    <span class="sidebar-icon"><i class="fa-solid fa-users"></i></span>
+                    <span class="sidebar-label">Usuarios</span>
+                </button>
+
+                <button class="sidebar-item" onclick="window.location.href='juegos.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-gamepad"></i></span>
+                    <span class="sidebar-label">Juegos</span>
+                </button>
+
+                <button class="sidebar-item" onclick="window.location.href='torneos.html'">
+                    <span class="sidebar-icon"><i class="fa-solid fa-trophy"></i></span>
+                    <span class="sidebar-label">Torneos</span>
+                </button>
+            </div>
+        </aside>
+
+        <section class="dashboard">
+            <section class="dashboard-header">
+                <nav class="top-nav">
+                    <div class="nav-tabs">
+                        <button class="nav-tab active">Todos</button>
+                        <button class="nav-tab">Verificados</button>
+                        <button class="nav-tab">Nuevos</button>
+                        <button class="nav-tab">Baneados</button>
+                    </div>
+                    <div class="nav-right">
+                        <button class="btn-create" onclick="window.location.href='crear-usuario.html'">
+                            <i class="fa-solid fa-plus"></i> Crear Nuevo Usuario
+                        </button>
+
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Buscar por ID, Nickname..." />
+                        </div>
+                        <button class="nav-avatar">
+              <span class="avatar-circle">
+                <img src="https://sm.ign.com/t/ign_pk/cover/a/avatar-gen/avatar-generations_rpge.600.jpg" alt="" srcset="">
+              </span>
+                        </button>
+                    </div>
+                </nav>
+            </section>
+
+            <section class="dashboard-body">
+
+                <div class="social-cards">
+                    <article class="social-card">
+                        <header class="social-card-header">
+                <span class="social-logo" style="background: #2d3436;">
+                  <i class="fa-solid fa-user-group"></i>
+                </span>
+                            <span class="social-platform">Base de Datos</span>
+                            <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+                        </header>
+                        <div class="social-main">
+                            <div class="social-number">15,402</div>
+                            <div class="social-subtitle">Jugadores Totales</div>
+                        </div>
+                    </article>
+
+                    <article class="social-card">
+                        <header class="social-card-header">
+                <span class="social-logo" style="background: #00b894;">
+                  <i class="fa-solid fa-user-plus"></i>
+                </span>
+                            <span class="social-platform">Crecimiento</span>
+                            <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+                        </header>
+                        <div class="social-main">
+                            <div class="social-number">128</div>
+                            <div class="social-subtitle">Registros Hoy</div>
+                        </div>
+                    </article>
+
+                    <article class="social-card">
+                        <header class="social-card-header">
+                <span class="social-logo" style="background: #d63031;">
+                  <i class="fa-solid fa-user-shield"></i>
+                </span>
+                            <span class="social-platform">Moderación</span>
+                            <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+                        </header>
+                        <div class="social-main">
+                            <div class="social-number">45</div>
+                            <div class="social-subtitle">Cuentas Reportadas</div>
+                        </div>
+                    </article>
+                </div>
+
+                <section class="content-section">
+                    <header class="content-header">
+                        <div class="content-title">Listado de Jugadores</div>
+                        <div class="content-tabs">
+                            <button class="content-tab active">Lista Completa</button>
+                            <button class="content-tab">Top Ranking</button>
+                            <button class="content-tab">Recientes</button>
+                        </div>
+                    </header>
+
+                    <div class="content-table">
+                        <div class="users-table-grid table-header" style="border-bottom: 1px solid #ececec; font-weight: 500; color: #8c8c8c;">
+                            <span>Usuario</span>
+                            <span>Email / ID</span>
+                            <span>Rango</span>
+                            <span>Estado</span>
+                            <span>Acciones</span>
+                        </div>
+
+                        <div class="users-table-grid table-row" style="border-bottom: 1px solid #f5f5f5;">
+              <span style="display:flex; align-items:center; gap:10px; font-weight:500;">
+                <img src="https://ui-avatars.com/api/?name=Harry+V&background=random" style="width:30px; height:30px; border-radius:50%;" alt="">
+                HarryVillanueva
+              </span>
+                            <span style="color: #8c8c8c; font-size:10px;">harry@example.com</span>
+                            <span><span class="user-rank rank-diamond">Diamante</span></span>
+                            <span><span class="status-badge status-active"></span>Activo</span>
+                            <span>
+                <button class="action-btn" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                <button class="action-btn" title="Ver Perfil"><i class="fa-solid fa-eye"></i></button>
+                <button class="action-btn delete" title="Banear"><i class="fa-solid fa-ban"></i></button>
+              </span>
+                        </div>
+
+                        <div class="users-table-grid table-row" style="border-bottom: 1px solid #f5f5f5;">
+              <span style="display:flex; align-items:center; gap:10px; font-weight:500;">
+                <img src="https://ui-avatars.com/api/?name=Pro+Gamer&background=random" style="width:30px; height:30px; border-radius:50%;" alt="">
+                xSlayer99
+              </span>
+                            <span style="color: #8c8c8c; font-size:10px;">slayer@example.com</span>
+                            <span><span class="user-rank rank-gold">Oro III</span></span>
+                            <span><span class="status-badge status-offline"></span>Offline</span>
+                            <span>
+                <button class="action-btn" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                <button class="action-btn" title="Ver Perfil"><i class="fa-solid fa-eye"></i></button>
+                <button class="action-btn delete" title="Banear"><i class="fa-solid fa-ban"></i></button>
+              </span>
+                        </div>
+
+                        <div class="users-table-grid table-row" style="border-bottom: 1px solid #f5f5f5;">
+              <span style="display:flex; align-items:center; gap:10px; font-weight:500;">
+                <img src="https://ui-avatars.com/api/?name=Noob+Master&background=random" style="width:30px; height:30px; border-radius:50%;" alt="">
+                NoobMaster69
+              </span>
+                            <span style="color: #8c8c8c; font-size:10px;">noob@example.com</span>
+                            <span><span class="user-rank rank-silver">Plata I</span></span>
+                            <span><span class="status-badge status-banned"></span>Baneado</span>
+                            <span>
+                <button class="action-btn" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                <button class="action-btn" title="Ver Perfil"><i class="fa-solid fa-eye"></i></button>
+                <button class="action-btn delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+              </span>
+                        </div>
+
+                        <div class="users-table-grid table-row" style="border-bottom: none;">
+              <span style="display:flex; align-items:center; gap:10px; font-weight:500;">
+                <img src="https://ui-avatars.com/api/?name=Fifa+King&background=random" style="width:30px; height:30px; border-radius:50%;" alt="">
+                FIFA_King
+              </span>
+                            <span style="color: #8c8c8c; font-size:10px;">fifa@example.com</span>
+                            <span><span class="user-rank rank-diamond">Elite</span></span>
+                            <span><span class="status-badge status-active"></span>En partida</span>
+                            <span>
+                <button class="action-btn" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                <button class="action-btn" title="Ver Perfil"><i class="fa-solid fa-eye"></i></button>
+                <button class="action-btn delete" title="Banear"><i class="fa-solid fa-ban"></i></button>
+              </span>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</div>
+</body>
+</html>

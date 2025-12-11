@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gaming Tournament Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/index.css"/>
+
+
+</head>
+<body>
+<div class="page-wrapper">
+  <main class="app">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-dot">
+          <img src="https://www.cursosccc.com/wp-content/uploads/2019/01/logo-ccc-2019.jpg" alt="" srcset="">
+        </div>
+      </div>
+
+      <div class="sidebar-section sidebar-section--main">
+        <button class="sidebar-item active">
+          <span class="sidebar-icon"><i class="fa-solid fa-gauge-high"></i></span>
+          <span class="sidebar-label">Dashboard</span>
+        </button>
+      </div>
+
+      <div class="sidebar-section">
+        <button class="sidebar-item" onclick="window.location.href='usuarios.html'">
+          <span class="sidebar-icon"><i class="fa-solid fa-users"></i></span>
+          <span class="sidebar-label">Usuarios</span>
+        </button>
+
+        <button class="sidebar-item" onclick="window.location.href='juegos.html'">
+          <span class="sidebar-icon"><i class="fa-solid fa-gamepad"></i></span>
+          <span class="sidebar-label">Juegos</span>
+        </button>
+
+        <button class="sidebar-item" onclick="window.location.href='torneos.html'">
+          <span class="sidebar-icon"><i class="fa-solid fa-trophy"></i></span>
+          <span class="sidebar-label">Torneos</span>
+        </button>
+      </div>
+    </aside>
+
+    <section class="dashboard">
+      <section class="dashboard-header">
+        <nav class="top-nav">
+          <div class="nav-tabs">
+            <button class="nav-tab active">Resumen</button>
+            <button class="nav-tab">En Vivo</button>
+            <button class="nav-tab">Resultados</button>
+            <button class="nav-tab">Calendario</button>
+          </div>
+          <div class="nav-right">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Buscar torneo, equipo..." />
+            </div>
+            <button class="nav-avatar">
+              <span class="avatar-circle">
+                <img src="https://sm.ign.com/t/ign_pk/cover/a/avatar-gen/avatar-generations_rpge.600.jpg" alt="" srcset="">
+              </span>
+            </button>
+          </div>
+        </nav>
+      </section>
+
+      <section class="dashboard-body">
+        <div class="social-cards">
+
+          <article class="social-card">
+            <header class="social-card-header">
+                <span class="social-logo bg-generic">
+                  <i class="fa-solid fa-users"></i>
+                </span>
+              <span class="social-platform">Comunidad</span>
+              <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+            </header>
+            <div class="social-main">
+              <div class="social-number">1,240</div>
+              <div class="social-subtitle">Usuarios Registrados</div>
+            </div>
+          </article>
+
+          <article class="social-card">
+            <header class="social-card-header">
+                <span class="social-logo bg-valorant">
+                  <i class="fa-solid fa-trophy"></i>
+                </span>
+              <span class="social-platform">Competición</span>
+              <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+            </header>
+            <div class="social-main">
+              <div class="social-number">12</div>
+              <div class="social-subtitle">Torneos Activos</div>
+            </div>
+          </article>
+
+          <article class="social-card">
+            <header class="social-card-header">
+                <span class="social-logo bg-fifa">
+                  <i class="fa-solid fa-gamepad"></i>
+                </span>
+              <span class="social-platform">Catálogo</span>
+              <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
+            </header>
+            <div class="social-main">
+              <div class="social-number">8</div>
+              <div class="social-subtitle">Juegos Soportados</div>
+            </div>
+          </article>
+        </div>
+
+        <section class="content-section">
+          <header class="content-header">
+            <div class="content-title">Estado de Torneos</div>
+            <div class="content-tabs">
+              <button class="content-tab active">En Curso</button>
+              <button class="content-tab">Próximos</button>
+              <button class="content-tab">Finalizados</button>
+            </div>
+          </header>
+
+          <div class="content-table">
+            <div class="table-header">
+              <span>Nombre del Torneo</span>
+              <span>Juego</span>
+              <span>Participantes</span>
+              <span>Premio</span>
+              <span>Estado</span>
+            </div>
+
+            <div class="table-row">
+              <span>Valorant Masters Cup</span>
+              <span>Valorant</span>
+              <span>32 Equipos</span>
+              <span>$10,000</span>
+              <span class="positive">En Curso</span>
+            </div>
+
+            <div class="table-row">
+              <span>FIFA Sunday League</span>
+              <span>FIFA 24</span>
+              <span>128 Jugadores</span>
+              <span>$500</span>
+              <span class="positive">Registro Abierto</span>
+            </div>
+
+            <div class="table-row">
+              <span>League of Legends Clash</span>
+              <span>LoL</span>
+              <span>16 Equipos</span>
+              <span>$2,500</span>
+              <span class="negative">Finalizado</span>
+            </div>
+
+            <div class="table-row">
+              <span>Street Fighter 6 Weekly</span>
+              <span>Fighting</span>
+              <span>64 Jugadores</span>
+              <span>$100</span>
+              <span class="positive">En Curso</span>
+            </div>
+
+          </div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</div>
+</body>
+</html>
